@@ -30,37 +30,45 @@ The data provided includes the following columns:
  -  Over Time: Whether the employee works overtime (`Yes` or `No`)
 
 ### Tools Used
-For data analysis, tools like the following can be employed:
-- Excel: For basic data manipulation, filtering, and summary statistics.
--SQL: If the data is stored in a database, SQL queries can help in extraction and analysis
-Power BI: For creating interactive dashboards and visualizations.
+----
+  - Excel: For basic data manipulation, filtering, and summary statistics.
+  -  SQL: For querying the data, by using some SQL functions to get specific data
+  -  Power BI: For creating interactive dashboards and visualizations.
+    
+    
 
+### Data Analysis
+----
+  - Excel worksheet
+   
+   - To calculate employee attrition, use the COUNTIF function
+      =COUNTIF(A2:A1,470, "Yes")
 
-Data Analysis
+   This counts how many "Yes"enteries are in the Attrition columbn.
+  
+   - To get the	Attrition Rate (as a percentage of total employees)
+   =COUNTIF(A2:A32, "Yes") / COUNTA(A2:A32)
 
-Attrition Count
-- Total number of employees: Count how many employees are in the dataset.
-- Total number of attrition cases: Count how many employees have left the company (`Attrition = Yes`).
-- Attrition rate: Calculate the attrition rate as:
-  \[
-  \text{Attrition Rate} = \frac{\text{Number of Ex-Employees}}{\text{Total Number of Employees}} \times 100
-  \]
+ This will give the attrition rate as a percentage.
 
-For the sample data:
-- Employees who left (`Attrition = Yes`): 6 
-- Total employees in the sample: 31
-- Attrition Rate: (6 / 31) * 100 ≈ **19.35%**
+ - To determine the reasons for attrition, you can analyze it across several variables:
+   -  By Department: Are certain departments experiencing higher attrition?
+   -  By Age Band: Does attrition vary across age groups?
+   -  By Gender: Are men or women leaving at higher rates?
+   -  By Job Role: Which job roles are most affected by attrition?
+   -  By Travel Status: Do employees who travel more frequently or not at all have higher attrition rates?
+   -  By Marital Status: Are single, married, or divorced employees more likely to leave?
 
-Attrition by Demographics and Factors
-To determine the reasons for attrition, you can analyze it across several variables:
-- By Department: Are certain departments experiencing higher attrition?
-- By Age Band: Does attrition vary across age groups?
-- By Gender: Are men or women leaving at higher rates?
-- By Job Role: Which job roles are most affected by attrition?
-- By Travel Status: Do employees who travel more frequently or not at all have higher attrition rates?
-- By Marital Status: Are single, married, or divorced employees more likely to leave?
+  - Pivot table was used to get a breakdown of Attrition by Department 
+    -  Select all your data.
+    - 	Go to Insert > Pivot Table.
+    -  Place Department in the Rows section.
+    - 	Place Attrition in the Values section (Count of Attrition).
+    - 	This will show how many employees left from each department.
 
 For example, you can group the data by `Attrition` and other factors like `Department`, `Age Band`, and `Job Role` to identify which groups show the highest attrition.
+
+
 
 
 Visual Analysis and Inference
