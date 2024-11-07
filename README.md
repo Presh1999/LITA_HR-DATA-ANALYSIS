@@ -84,7 +84,7 @@ The data provided includes the following columns:
  - Attrition Rate by Educational Fields: A column chart to show attrtion count across Educational Fields.
  - Travel Frequency vs Attrition: A bar chart comparing attrition for different travel categories (`Travel_Rarely`, `Travel_Frequently`, `Non-Travel`).
 
-
+https://github.com/Presh1999/LITA_HR-DATA-ANALYSIS/blob/a26ff5af6bcee069931d074568df61f41ac9af2c/HR%20Data%20Visualization%201.png
 
 
 #### Use of Slicers
