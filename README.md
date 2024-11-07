@@ -88,6 +88,8 @@ https://github.com/Presh1999/LITA_HR-DATA-ANALYSIS/blob/a26ff5af6bcee069931d0745
 
 https://github.com/Presh1999/LITA_HR-DATA-ANALYSIS/blob/a6cf1f5cc9dd0f46b07a0177bf6babe6deac8b99/HR%20Data%20Visualization%202.png
 
+https://github.com/Presh1999/LITA_HR-DATA-ANALYSIS/blob/a7b533273997432e26f98516efb63659fddf4198/HR%20Data%20Visualization%203.png
+
 #### Use of Slicers
   - Use Slicers to allow users to filter the data by Department, Age Group, Gender, Educational field.
 
