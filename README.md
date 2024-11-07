@@ -84,6 +84,9 @@ The data provided includes the following columns:
  - Attrition Rate by Educational Fields: A column chart to show attrtion count across Educational Fields.
  - Travel Frequency vs Attrition: A bar chart comparing attrition for different travel categories (`Travel_Rarely`, `Travel_Frequently`, `Non-Travel`).
 
+
+
+
 #### Use of Slicers
   - Use Slicers to allow users to filter the data by Department, Age Group, Gender, Educational field.
 
