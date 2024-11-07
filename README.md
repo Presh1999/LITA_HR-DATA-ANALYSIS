@@ -32,52 +32,64 @@ The data provided includes the following columns:
 ### Tools Used
 ----
   - Excel: For basic data manipulation, filtering, and summary statistics.
-  -  SQL: For querying the data, by using some SQL functions to get specific data
   -  Power BI: For creating interactive dashboards and visualizations.
     
     
 
 ### Data Analysis
 ----
-  - Excel worksheet
+#### Data Analysis in Excel worksheet
    
    - To calculate employee attrition, use the COUNTIF function
       =COUNTIF(A2:A1,470, "Yes")
 
-   This counts how many "Yes"enteries are in the Attrition columbn.
+   This counts how many "Yes" enteries are in the Attrition columbn.
   
    - To get the	Attrition Rate (as a percentage of total employees)
    =COUNTIF(A2:A32, "Yes") / COUNTA(A2:A32)
 
  This will give the attrition rate as a percentage.
 
- - To determine the reasons for attrition, you can analyze it across several variables:
-   -  By Department: Are certain departments experiencing higher attrition?
-   -  By Age Band: Does attrition vary across age groups?
-   -  By Gender: Are men or women leaving at higher rates?
-   -  By Job Role: Which job roles are most affected by attrition?
-   -  By Travel Status: Do employees who travel more frequently or not at all have higher attrition rates?
+ - To determine the reasons for attrition, pivot table was used to get a breakdown of Attrition by;
+   -  Department: Are certain departments experiencing higher attrition?
+   -  Age Band: Does attrition vary across age groups?
+   -  Gender: Are men or women leaving at higher rates?
+   -  Job Role: Which job roles are most affected by attrition?
+   -  Educational field: Do employees in certain educational field have higher attrition rates?
    -  By Marital Status: Are single, married, or divorced employees more likely to leave?
 
-  - Pivot table was used to get a breakdown of Attrition by Department 
-    -  Select all your data.
-    - 	Go to Insert > Pivot Table.
-    -  Place Department in the Rows section.
-    - 	Place Attrition in the Values section (Count of Attrition).
-    - 	This will show how many employees left from each department.
+  ####  Data Analysis and Visualization in Power BI
+   -  Step 1: Import the Data
+      -  Open Power BI Desktop.
+      -  Go to Home > Get Data > Excel or SQL Server (depending on where your data is stored).
+       - 	Import the dataset into Power BI.
 
-For example, you can group the data by `Attrition` and other factors like `Department`, `Age Band`, and `Job Role` to identify which groups show the highest attrition.
+   -  Step 2: Create Measures for Attrition
+       a. Percentage of Attrition/Attrition Rate:
+      
+          - Attrition rate=Sum(['Attrition count'])/Sum(['Total Employee'])
+      
+         -  N/B: First use condidtional column to convert the Attrition(from text to number)
+           
+        b. Average age
+      
+          - Average age=Ave(age)
 
+   - Also create a conditional column for Job satisfaction rating
 
+#### Visual Analysis and Inference
+ - Attrition Rate by Department: A bar chart to show how attrition varies across departments.
+ - Attrition Rate by Age group and gender: Donut charts to display attrition across different age group and gender
+ - Attrition Rate by Educational Fields: A column chart to show attrtion count across Educational Fields.
+ - Travel Frequency vs Attrition: A bar chart comparing attrition for different travel categories (`Travel_Rarely`, `Travel_Frequently`, `Non-Travel`).
 
+#### Use of Slicers
+  - Use Slicers to allow users to filter the data by Department, Age Group, Gender, Educational field.
 
-Visual Analysis and Inference
--Attrition Rate by Department: A bar chart to show how attrition varies across departments.
-- Attrition Rate by Age Group: A bar chart or pie chart to display attrition across different age bands.
-- Gender Distribution: A pie chart showing the gender breakdown of attrition.
-- Travel Frequency vs Attrition: A bar chart comparing attrition for different travel categories (`Travel_Rarely`, `Travel_Frequently`, `Non-Travel`).
+#### Create Dashboards
+  -	Combine these visualizations into a dashboard.
 
-**Key Inference Example**:
+### Key Inference Example
 - **Age Group**: It might be observed that attrition is higher in younger employees (e.g., `25 - 34`), which could suggest that younger workers are more likely to leave for career advancement or personal reasons.
 - **Travel Frequency**: Employees with `Travel_Rarely` may show a higher attrition rate, suggesting that infrequent travel may be associated with dissatisfaction or lack of career progression.
 
